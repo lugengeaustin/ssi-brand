@@ -1,0 +1,27 @@
+{
+  "name": "@ssi/brand",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Canonical Sub-Sahara Institute brand tokens, components, and export styles for the Sahara product suite.",
+  "main": "src/index.js",
+  "exports": {
+    ".":                     "./src/index.js",
+    "./tokens":              "./src/tokens.js",
+    "./tailwind-preset":     "./src/tailwind-preset.js",
+    "./css":                 "./src/brand.css",
+    "./docx-css":            "./src/docx-css.js",
+    "./react":               "./src/react.jsx",
+    "./logos/wordmark.png":  "./assets/logos/ssi-logo-2026.png",
+    "./logos/header.png":    "./assets/logos/ssi-logo-header.png",
+    "./logos/mark.png":      "./assets/logos/ssi-logo.png"
+  },
+  "files": [
+    "src",
+    "assets",
+    "docs"
+  ],
+  "peerDependencies": {
+    "react": ">=18",
+    "tailwindcss": ">=3"
+  }
+}

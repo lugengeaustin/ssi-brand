@@ -1,0 +1,9 @@
+# ── @ssi/brand · canonical brand package for the Sahara suite ──
+node_modules/
+*.log
+.DS_Store
+.idea/
+.vscode/
+*.tgz
+dist/
+.cache/

@@ -1,0 +1,104 @@
+/* ════════════════════════════════════════════════════════════════════════
+ * @ssi/brand · canonical CSS custom properties
+ *
+ * Drop into the global stylesheet of any Sahara app:
+ *   @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Mono:wght@400;500&display=swap");
+ *   @import "@ssi/brand/css";
+ *
+ * Both light (default) and dark themes are defined. Toggle dark mode by
+ * setting `data-theme="dark"` (E-Asess convention) OR `.dark` (Tailwind
+ * convention) on either <html> or <body>.
+ * ════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Brand pigments ───────────────────────────────────────────── */
+  --exec-blue:          #1A3F8F;
+  --exec-blue-deep:     #0D2456;
+  --exec-blue-mid:      #1E4FA3;
+
+  --growth-gold:        #F2B705;
+  --growth-gold-light:  #F7CB45;
+  --growth-gold-pale:   #FDF3CC;
+
+  --sustain-green:       #1FA84E;
+  --sustain-green-deep:  #156B35;
+  --sustain-green-light: #27C45E;
+
+  --white:        #FFFFFF;
+  --off-white:    #F8F7F4;
+  --warm-gray:    #E8E5E0;
+  --ink:          #0D1A2E;
+  --ink-mid:      #2C3E55;
+  --ink-light:    #4A5A6E;
+  --ink-muted:    #6B7280;
+
+  --color-error:   #EF4444;
+  --color-warning: #F59E0B;
+  --gold-accent:   #F2B705;
+
+  /* ── Semantic application tokens ──────────────────────────────── */
+  --bg:           #F8F7F4;
+  --bg-card:      #FFFFFF;
+  --text:         #0D1A2E;
+  --text-muted:   #6B7280;
+  --border:       #E8E5E0;
+  --accent-navy:  #1A3F8F;
+  --accent-gold:  #F2B705;
+
+  /* ── Type ─────────────────────────────────────────────────────── */
+  --font-body:    'DM Sans', 'Calibri', 'Segoe UI', Arial, sans-serif;
+  --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-mono:    'DM Mono', ui-monospace, 'Courier New', monospace;
+
+  /* ── Rules / dividers ─────────────────────────────────────────── */
+  --rule:      rgba(26, 63, 143, 0.12);
+  --gold-rule: rgba(242, 183, 5, 0.35);
+}
+
+/* ── DARK THEME ─────────────────────────────────────────────────── */
+[data-theme="dark"],
+.dark {
+  --bg:           #0D1117;
+  --bg-card:      #161B22;
+  --text:         #E6EDF3;
+  --text-muted:   #8B949E;
+  --border:       #30363D;
+  --accent-navy:  #58A6FF;
+  --accent-gold:  #D29922;
+
+  --white:      #161B22;
+  --off-white:  #0D1117;
+  --warm-gray:  #21262D;
+  --ink:        #E6EDF3;
+  --ink-mid:    #C9D1D9;
+  --ink-light:  #8B949E;
+  --ink-muted:  #6E7681;
+}
+
+/* ── Helper utilities (optional — apps that prefer Tailwind classes
+ *    can ignore these) ─────────────────────────────────────────── */
+.ssi-accent-bar {
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--exec-blue) 0%,
+    var(--growth-gold) 50%,
+    var(--sustain-green) 100%
+  );
+}
+
+.ssi-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.ssi-label-caps {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
