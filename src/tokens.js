@@ -35,6 +35,7 @@ export const colors = {
   inkMid:   "#3A4150",
   inkLight: "#3F4753",
   inkMuted: "#5C6470",   // Calm Studio --muted (secondary text)
+  line:     "#E3E6EC",   // Calm Studio --border (hairline / dividers)
 
   // ── STATE (red is reserved for risks / errors only) ──────────────
   error:   "#C0392B",    // Calm Studio --red

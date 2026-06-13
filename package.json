@@ -24,7 +24,8 @@
   "files": [
     "src",
     "assets",
-    "docs"
+    "docs",
+    "scripts"
   ],
   "peerDependencies": {
     "react": ">=18",
