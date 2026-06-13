@@ -1,8 +1,8 @@
 {
   "name": "@ssi/brand",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "Canonical Sub-Sahara Institute brand tokens, components, and export styles for the Sahara product suite.",
+  "description": "Canonical Sub-Sahara Institute brand tokens, components, and export styles for the Sahara product suite — the Calm Studio design language (Roboto, Brand Blue/Gold/Green, off-white canvas, light + dark).",
   "main": "src/index.js",
   "exports": {
     ".":                     "./src/index.js",
