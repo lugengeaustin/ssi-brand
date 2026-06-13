@@ -7,14 +7,22 @@ automatically instead of relying on review.
 
 ## Per-app setup
 
-1. Depend on the package (decided approach — git tag):
+1. Depend on the package via the **public https tarball** for a tagged release:
 
    ```jsonc
    // package.json
    "devDependencies": {
-     "@ssi/brand": "github:lugengeaustin/ssi-brand#v1.0.0"
+     "@ssi/brand": "https://github.com/lugengeaustin/ssi-brand/archive/refs/tags/v1.0.0.tar.gz"
    }
    ```
+
+   > Why a tarball and not `github:lugengeaustin/ssi-brand#v1.0.0`? npm canonicalizes
+   > GitHub `git+https` URLs to `git+ssh` in the lockfile, and CI runners / Vercel
+   > builds have no SSH key — so the git form fails with `Permission denied
+   > (publickey)` even on a public repo. The https tarball uses no git protocol,
+   > needs no credentials, and installs anonymously in every environment. `ssi-brand`
+   > is public, so this works with zero secret setup. Bump the tag in the URL to
+   > upgrade.
 
 2. Add a script:
 
