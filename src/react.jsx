@@ -48,13 +48,13 @@ export function BrandHeader({ logoSrc, subtitle, action, style }) {
         : <span style={{
             fontFamily: fonts.heading,
             fontSize: 22,
-            fontWeight: 700,
+            fontWeight: 500,
             color: colors.execBlueDeep,
             letterSpacing: '0.01em',
           }}>SSI</span>}
 
       <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ fontFamily: fonts.heading, fontSize: 18, fontWeight: 700, color: colors.execBlueDeep, lineHeight: 1.15 }}>
+        <div style={{ fontFamily: fonts.heading, fontSize: 18, fontWeight: 500, color: colors.execBlueDeep, lineHeight: 1.15 }}>
           {organisation.name}
         </div>
         <div style={{ fontFamily: fonts.body, fontSize: 11, color: colors.inkMid, letterSpacing: '0.02em' }}>
